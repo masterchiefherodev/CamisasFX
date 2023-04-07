@@ -87,11 +87,13 @@ public class PrincipalController implements Initializable {
             // Precio final
             tfdPrecioFinalCasualML.setText("$" + Operaciones.calcularPrecioFinal(numeroCasualMangaLarga, Tipos.CASUAL_ML.getPrecio()));
         } catch (Exception e) {
+            numeroCasualMangaLarga = 0;
             tfdNumeroCasualML.setText("");
             tfdPrecioListaCasualML.setText("");
             tfdDescuentoCasualML.setText("");
             tfdPrecioFinalCasualML.setText("");
         }
+        llenarTotal();
     }
 
     @FXML
@@ -106,11 +108,13 @@ public class PrincipalController implements Initializable {
             // Precio final
             tfdPrecioFinalFormalML.setText("$" + Operaciones.calcularPrecioFinal(numeroFormalMangaLarga, Tipos.FORMAL_ML.getPrecio()));
         } catch (Exception e) {
+            numeroFormalMangaLarga = 0;
             tfdNumeroFormalML.setText("");
             tfdPrecioListaFormalML.setText("");
             tfdDescuentoFormalML.setText("");
             tfdPrecioFinalFormalML.setText("");
         }
+        llenarTotal();
     }
 
     @FXML
@@ -125,11 +129,13 @@ public class PrincipalController implements Initializable {
             // Precio final
             tfdPrecioFinalMC.setText("$" + Operaciones.calcularPrecioFinal(numeroMangaCorta, Tipos.MANGA_CORTA.getPrecio()));
         } catch (Exception e) {
+            numeroMangaCorta = 0;
             tfdNumeroMC.setText("");
             tfdPrecioListaMC.setText("");
             tfdDescuentoMC.setText("");
             tfdPrecioFinalMC.setText("");
         }
+        llenarTotal();
     }
 
     @Override
@@ -151,6 +157,30 @@ public class PrincipalController implements Initializable {
         this.tfdTotalPrecioFinal.setEditable(false);
         this.tfdTotalPrecioLista.setEditable(false);
         this.tfdTotalNumero.setEditable(false);
+    }
+
+    public void llenarTotal() {
+        tfdTotalNumero.setText(Integer.toString(numeroMangaCorta + numeroCasualMangaLarga + numeroFormalMangaLarga));
+        tfdTotalPrecioLista.setText("$" + calcularTotalPrecioLista());
+    }
+
+    public String calcularTotalPrecioLista() {
+        float mangaCortaPrecioLista = 0.0f;
+        float casualMangaLargaPrecioLista = 0.0f;
+        float formalMangaLargaPrecioLista = 0.0f;
+        if (!tfdPrecioListaMC.getText().equals("")) {
+            mangaCortaPrecioLista = Float.parseFloat(tfdPrecioListaMC.getText().replace("$", ""));
+        }
+
+        if (!tfdPrecioListaCasualML.getText().equals("")) {
+            casualMangaLargaPrecioLista = Float.parseFloat(tfdPrecioListaCasualML.getText().replace("$", ""));
+        }
+
+        if (!tfdPrecioListaFormalML.getText().equals("")) {
+            formalMangaLargaPrecioLista = Float.parseFloat(tfdPrecioListaFormalML.getText().replace("$", ""));
+        }
+
+        return Float.toString(mangaCortaPrecioLista + casualMangaLargaPrecioLista + formalMangaLargaPrecioLista);
     }
 
 }
