@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -9,20 +8,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.ico.camisasfx.controller.PrincipalController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="640.0" styleClass="container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.ico.camisasfx.controller.PrincipalController">
    <children>
-      <VBox prefHeight="330.0" prefWidth="600.0">
+      <VBox prefHeight="300.0" prefWidth="640.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+            <VBox alignment="CENTER" prefHeight="60.0" prefWidth="640.0" styleClass="banner">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tienda de Camisas" textAlignment="CENTER">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="banner_text" text="Tienda de Camisas" textAlignment="CENTER">
                      <font>
-                        <Font size="25.0" />
+                        <Font name="Cascadia Code Bold" size="25.0" />
                      </font>
                   </Text>
                </children>
             </VBox>
-            <VBox prefHeight="220.0" prefWidth="600.0">
+            <VBox prefHeight="220.0" prefWidth="640.0" styleClass="main-container">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -30,14 +29,14 @@
                   <Insets top="20.0" />
                </padding>
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="640.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No.">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="No.">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="30.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de camisa">
+                        <Text layoutX="30.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="Tipo de camisa">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -45,28 +44,28 @@
                               <Insets left="36.0" />
                            </HBox.margin>
                         </Text>
-                        <Text layoutX="90.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio de lista">
+                        <Text layoutX="90.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="Lista">
                            <font>
                               <Font size="15.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="100.0" />
+                              <Insets left="120.0" />
                            </HBox.margin>
                         </Text>
-                        <Text layoutX="300.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descuento">
+                        <Text layoutX="300.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="Descuento">
                            <font>
                               <Font size="15.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="16.0" />
+                              <Insets left="45.0" />
                            </HBox.margin>
                         </Text>
-                        <Text layoutX="399.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio Final">
+                        <Text layoutX="399.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text" text="Final">
                            <font>
                               <Font size="15.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="20.0" />
+                              <Insets left="30.0" />
                            </HBox.margin>
                         </Text>
                      </children>
@@ -74,15 +73,15 @@
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="640.0">
                      <children>
                         <TextField fx:id="tfdNumeroMC" onKeyTyped="#setDatosMangaCorta" prefHeight="25.0" prefWidth="50.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Camisa de manga corta">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text_second" text="Camisa de manga corta">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                            <font>
-                              <Font size="15.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Text>
                         <TextField fx:id="tfdPrecioListaMC" prefHeight="25.0" prefWidth="100.0">
@@ -105,20 +104,20 @@
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0" prefHeight="40.0" prefWidth="600.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="60.0" prefHeight="40.0" prefWidth="640.0">
                      <children>
                         <TextField fx:id="tfdNumeroCasualML" onKeyTyped="#setDatosCasualMangaLarga" prefHeight="25.0" prefWidth="50.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Casual de manga larga">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text_second" text="Casual de manga larga">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                            <font>
-                              <Font size="15.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Text>
                         <TextField fx:id="tfdPrecioListaCasualML" prefHeight="25.0" prefWidth="100.0">
                            <HBox.margin>
-                              <Insets left="46.0" />
+                              <Insets left="40.0" />
                            </HBox.margin>
                         </TextField>
                         <TextField fx:id="tfdDescuentoCasualML" layoutX="356.0" layoutY="18.0" prefHeight="25.0" prefWidth="80.0">
@@ -136,20 +135,20 @@
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="600.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="640.0">
                      <children>
                         <TextField fx:id="tfdNumeroFormalML" onKeyTyped="#setDatosFormalMangaLarga" prefHeight="25.0" prefWidth="50.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Formal de manga larga">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text_second" text="Formal de manga larga">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
                            <font>
-                              <Font size="15.0" />
+                              <Font name="System Bold" size="15.0" />
                            </font>
                         </Text>
                         <TextField fx:id="tfdPrecioListaFormalML" prefHeight="25.0" prefWidth="100.0">
                            <HBox.margin>
-                              <Insets left="44.0" />
+                              <Insets left="40.0" />
                            </HBox.margin>
                         </TextField>
                         <TextField fx:id="tfdDescuentoFormalML" layoutX="356.0" layoutY="18.0" prefHeight="25.0" prefWidth="80.0">
@@ -167,10 +166,10 @@
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" prefHeight="40.0" prefWidth="600.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" prefHeight="40.0" prefWidth="640.0">
                      <children>
                         <TextField fx:id="tfdTotalNumero" prefHeight="25.0" prefWidth="50.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text_second" text="Total">
                            <HBox.margin>
                               <Insets left="10.0" />
                            </HBox.margin>
@@ -180,7 +179,7 @@
                         </Text>
                         <TextField fx:id="tfdTotalPrecioLista" prefHeight="25.0" prefWidth="100.0">
                            <HBox.margin>
-                              <Insets left="160.0" />
+                              <Insets left="180.0" />
                            </HBox.margin>
                         </TextField>
                         <TextField fx:id="tfdTotalDescuento" layoutX="356.0" layoutY="18.0" prefHeight="25.0" prefWidth="80.0">
@@ -197,18 +196,6 @@
                      <padding>
                         <Insets left="20.0" />
                      </padding>
-                  </HBox>
-               </children>
-            </VBox>
-            <VBox prefHeight="50.0" prefWidth="600.0">
-               <children>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="btnGenerar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#generarCSV" text="Generar CSV">
-                           <HBox.margin>
-                              <Insets right="20.0" />
-                           </HBox.margin></Button>
-                     </children>
                   </HBox>
                </children>
             </VBox>

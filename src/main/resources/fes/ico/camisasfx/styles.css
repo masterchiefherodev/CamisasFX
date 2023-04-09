@@ -1,0 +1,31 @@
+* {
+   -fx-color-base:  #6c2bef;
+   -fx-color-text: #ffffff;
+   -fx-color-second-text: #6c757d;
+   -fx-color-bg: #212529;
+
+}
+
+.banner{
+    -fx-background-color: -fx-color-base;
+}
+
+.banner_text{
+    -fx-fill: -fx-color-text;
+}
+
+.container{
+    -fx-background-color: -fx-color-bg;
+}
+
+.main-container{
+    -fx-background-color: -fx-color-bg;
+}
+
+.main-text{
+    -fx-fill: -fx-color-text;
+}
+
+.main-text_second{
+    -fx-fill: -fx-color-second-text;
+}
