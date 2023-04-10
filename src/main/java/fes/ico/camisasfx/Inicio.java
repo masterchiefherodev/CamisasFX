@@ -17,7 +17,6 @@ public class Inicio extends Application {
 
             Scene scene = new Scene(root);
             stage.setResizable(false);
-            stage.getIcons().add(new Image("/fes/ico/camisasfx/icon.png"));
             stage.setTitle("Tienda de Camisas");
             stage.setScene(scene);
             scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -26,6 +25,7 @@ public class Inicio extends Application {
             e.printStackTrace();
         }
     }
+
 
     public static void main(String[] args) {
         launch();
